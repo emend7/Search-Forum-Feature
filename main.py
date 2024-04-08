@@ -19,7 +19,7 @@ print("** Welcome to the Search Forum Database Application")
 print('** Welcome to the Chicago Lobbyist Database Application **\n')
 print()
 
-choice = input("Please enter a command (1-5, x to exit): ")
+choice = input("Please enter a command (1-4, x to exit): ")
 
 while choice != "x":
     if choice == "1":
