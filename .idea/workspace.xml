@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80e5f0a1-b76f-4735-a2fa-d383ff4e851a" name="Changes" comment="added some random files idk">
-      <change afterPath="$PROJECT_DIR$/datatier.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/objecttier.py" afterDir="false" />
+    <list default="true" id="80e5f0a1-b76f-4735-a2fa-d383ff4e851a" name="Changes" comment="added solution to">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Forum.db" beforeDir="false" afterPath="$PROJECT_DIR$/Forum.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/objecttier.py" beforeDir="false" afterPath="$PROJECT_DIR$/objecttier.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +91,8 @@
       <updated>1712090559041</updated>
       <workItem from="1712090574741" duration="3875000" />
       <workItem from="1712348605725" duration="21000" />
-      <workItem from="1712533454667" duration="2455000" />
+      <workItem from="1712533454667" duration="6524000" />
+      <workItem from="1712632878147" duration="9841000" />
     </task>
     <task id="LOCAL-00001" summary="added main.py">
       <option name="closed" value="true" />
@@ -125,7 +126,39 @@
       <option name="project" value="LOCAL" />
       <updated>1712091697872</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added objecttier and datatier and presentation tier">
+      <option name="closed" value="true" />
+      <created>1712536279108</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712536279108</updated>
+    </task>
+    <task id="LOCAL-00006" summary="updated welcome comment in main.py">
+      <option name="closed" value="true" />
+      <created>1712536311292</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1712536311292</updated>
+    </task>
+    <task id="LOCAL-00007" summary="teaching olivia how to resolve a merge conflict">
+      <option name="closed" value="true" />
+      <created>1712536494144</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1712536494144</updated>
+    </task>
+    <task id="LOCAL-00008" summary="conflict">
+      <option name="closed" value="true" />
+      <created>1712536524750</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1712536524750</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,9 +168,13 @@
     <MESSAGE value="added main.py" />
     <MESSAGE value="added .gitignore" />
     <MESSAGE value="added some random files idk" />
-    <option name="LAST_COMMIT_MESSAGE" value="added some random files idk" />
+    <MESSAGE value="added objecttier and datatier and presentation tier" />
+    <MESSAGE value="updated welcome comment in main.py" />
+    <MESSAGE value="teaching olivia how to resolve a merge conflict" />
+    <MESSAGE value="conflict" />
+    <option name="LAST_COMMIT_MESSAGE" value="conflict" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Search_Forum_Feature$main.coverage" NAME="main Coverage Results" MODIFIED="1712090582553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Search_Forum_Feature$main.coverage" NAME="main Coverage Results" MODIFIED="1712644337252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
