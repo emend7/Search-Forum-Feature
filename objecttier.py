@@ -29,7 +29,7 @@ class Post:
 
     @property
     def Read_Time(self):
-        return self.Read_Time()
+        return self._Read_Time
 
     @property
     def Upvote(self):
@@ -194,12 +194,12 @@ def filter_by_industry(dbConn, industry):
 
 # usecase 4: want to search by problem
 def filter_by_problem(dbConn, problem):
+    like_problem = """
+            SELECT * FROM Posts 
+            WHERE Title LIKE ? OR DESCRIPTION LIKE ? 
+            ORDER BY Num_Upvotes DESC
+            """
     try:
-        like_problem = """
-        SELECT * FROM Posts 
-        WHERE Title LIKE ? OR DESCRIPTION LIKE ? 
-        ORDER BY Num_Upvotes DESC
-        """
         results = datatier.select_n_rows(dbConn, like_problem, [problem, problem])
         posts = []
         for row in results:
