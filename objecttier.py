@@ -208,3 +208,19 @@ def filter_by_problem(dbConn, problem):
 
     except Exception as err:
         return -1
+
+def filter_by_reviewID(dbConn, reviewID):
+    get_comments = """
+    SELECT * FROM Comments
+    WHERE Review_ID  = ?
+    ORDER BY Downvote DESC
+    """
+
+    try:
+        results = datatier.select_n_rows(dbConn, get_comments, [reviewID])
+        comments = []
+        for result in results:
+            comments.append(Comments(result[0], result[1], result[2], result[3], result[4], result[5]))
+        return comments
+    except Exception as err:
+        return -1

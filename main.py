@@ -21,9 +21,10 @@ stop_words = {
     "few", "more", "most", "other", "some", "such", "no", "nor", "not", "only", "own", "same", "so", "than",
     "too", "very", "s", "t", "can", "will", "just", "don", "should", "now"
 }
-def printNice(results):
+def printReview(results):
     for result in results:
         print(f"""----------------------------------------------------------------------
+| Review_ID: {result.Review_ID}
 | Upvotes: {result.Upvote}      | Title: {result.Title}       
 | Downvotes: {result.Downvote}  | Solution: {result.Solution}
 |
@@ -35,6 +36,16 @@ def printNice(results):
 | Industry: {result.Industry}
  """)
     print("----------------------------------------------------------------------")
+
+def printComment(results):
+    for result in results:
+        print(f"""------------------------------------
+User: {result.User_ID}
+Body: {result.Body}
+Upvote: {result.Upvote}
+Downvote: {result.Downvote}
+        """)
+    print("------------------------------------")
 
 
 # have a few options on how many items you want to search for
@@ -55,7 +66,7 @@ def returnStats(dbconn):
 def searchbyID(dbconn):
     product_id = input("What is the product id you are looking for? ")
     results = objecttier.filter_by_PID(dbconn, product_id)
-    printNice(results)
+    printReview(results)
 
 
 # usecase 2: want to search by product name
@@ -63,7 +74,7 @@ def searchbyName(dbconn):
     answer = TextBlob(input("What is the name of the product you are looking for? "))
     name = answer.correct()
     results = objecttier.filter_by_Name(dbconn, name)
-    printNice(results)
+    printReview(results)
 
 
 # usecase 3: want to search by industry
@@ -71,7 +82,7 @@ def searchbyIndustry(dbconn):
     answer = TextBlob(input("What industry are you looking for? "))
     industry = answer.correct()
     results = objecttier.filter_by_industry(dbconn, industry)
-    printNice(results)
+    printReview(results)
 
 
 def removeDup (results):
@@ -97,14 +108,19 @@ def searchbyProblem(dbconn):
         results = objecttier.filter_by_problem(dbconn, reformated)
         all_results += results
     newResults = removeDup(all_results)
-    printNice(newResults)
+    printReview(newResults)
+
+def getCommentsFromReview(dbconn):
+    answer = input("What is the review_id? ")
+    results = objecttier.filter_by_reviewID(dbconn, answer)
+    printComment(results)
 
 # Press the green button in the gutter to run the script.
 print("** Welcome to the Search Forum Database Application **\n")
 print()
 returnStats(dbconn)
 
-choice = input("Please enter a command (1-4, x to exit): ")
+choice = input("Please enter a command (1-5, x to exit): ")
 
 while choice != "x":
     if choice == "1":
@@ -119,6 +135,9 @@ while choice != "x":
     elif choice == "4":
         # usecase 4: want to search by problem
         searchbyProblem(dbconn)
+    elif choice == "5":
+        # usecase 4: want to search by problem
+        getCommentsFromReview(dbconn)
     else:
         print("**Error, unknown command, try again...\n")
 
